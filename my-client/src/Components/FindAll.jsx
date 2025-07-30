@@ -8,7 +8,7 @@ export function FindAll() {
   async function findAllHandler(e) {
     e.preventDefault();
     try {
-      const response = await axios.get('http://localhost:3001/api/employees');
+      const response = await axios.get('https://my-project-backend-6tol.onrender.com/api/employees');
       setEmployees(response.data);
     } catch (err) {
       alert(err);
