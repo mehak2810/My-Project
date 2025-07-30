@@ -1,0 +1,128 @@
+/* Background Container */
+.findall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form Glass UI */
+.findall-form {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.5s ease-in;
+}
+
+.findall-form h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.findall-form button {
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.findall-form button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(67, 206, 162, 0.3);
+}
+
+/* Table Styling */
+.table-container {
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+}
+
+thead {
+  background: #43cea2;
+  color: white;
+}
+
+thead th,
+tbody td {
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  border-right: 1px solid #ddd;
+}
+
+thead th:last-child,
+tbody td:last-child {
+  border-right: none;
+}
+
+tbody td {
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+  color: #333;
+}
+
+tbody tr:hover {
+  background: #f0fff5;
+  transition: 0.2s;
+}
+
+tbody td[colspan='4'] {
+  text-align: center;
+  font-style: italic;
+  padding: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .table-container {
+    padding: 0 10px;
+  }
+
+  .findall-form {
+    padding: 25px 20px;
+  }
+
+  .findall-form h2 {
+    font-size: 22px;
+  }
+}

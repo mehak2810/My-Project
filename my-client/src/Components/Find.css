@@ -1,0 +1,113 @@
+/* Background Container */
+.find-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Heading */
+.find-container h3 {
+  font-size: 26px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+/* Input Field */
+.find-container input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 14px 16px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.find-container input:focus {
+  outline: none;
+  border: 2px solid #27ae60;
+  background-color: #f5fff5;
+  box-shadow: 0 0 8px rgba(39, 174, 96, 0.3);
+}
+
+/* Button */
+.find-container button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.find-container button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 20px rgba(67, 206, 162, 0.3);
+}
+
+/* Employee Detail Box */
+.emp-details {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  padding: 30px 25px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  animation: fadeIn 0.5s ease-in;
+}
+
+/* Employee Detail Text */
+.emp-details h4 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.emp-details p {
+  font-size: 16px;
+  margin: 6px 0;
+  color: #333;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  .find-container input[type="text"],
+  .emp-details {
+    max-width: 90%;
+  }
+
+  .find-container h3 {
+    font-size: 22px;
+  }
+
+  .emp-details h4 {
+    font-size: 20px;
+  }
+}
